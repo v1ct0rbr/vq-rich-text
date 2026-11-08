@@ -1,0 +1,70 @@
+{
+  "name": "@v1ct0rbr/vq-rich-text",
+  "version": "0.1.0",
+  "description": "Editor rich text com imagens redimensionáveis, vídeos e tabelas configuráveis.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "keywords": [
+    "rich-text",
+    "editor",
+    "react",
+    "wysiwyg",
+    "tiptap",
+    "contenteditable"
+  ],
+  "author": {
+    "name": "Victor Queiroga",
+    "email": "contato@victorqueiroga.com",
+    "url": "https://victorqueiroga.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v1ct0rbr/vq-rich-text.git"
+  },
+  "homepage": "https://github.com/v1ct0rbr/vq-rich-text#readme",
+  "bugs": {
+    "url": "https://github.com/v1ct0rbr/vq-rich-text/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "dev": "vite",
+    "playground": "vite",
+    "build": "tsc -p tsconfig.json && node scripts/copy-css.mjs",
+    "build:playground": "vite build",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "lucide-react": "^0.544.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "lucide-react": "^0.544.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^8.0.16"
+  }
+}
